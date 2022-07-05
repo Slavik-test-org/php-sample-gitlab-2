@@ -138,7 +138,6 @@ pipeline {
         )
       }
       steps {
-        sh '''PASSWORD=1234
 
 
             sudo
@@ -151,7 +150,6 @@ pipeline {
             curl -xk \
             http://www.google.com'''
 
-        sh 'PASSWORD=1234 sudo curl http://www.google.com'
         sh 'npm i'
         sh 'checkov a'
         sh 'curl https://www.google.com'
